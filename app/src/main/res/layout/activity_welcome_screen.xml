@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="55dp"
+        android:layout_marginLeft="10dp"
         android:text="Explore \n your \n Creativity"
         android:textColor="@color/quantum_white_100"
         android:textSize="@dimen/spacing_xxxlarge" />
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/spacing_xxxlarge"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="320dp"
         android:text="Join DDE to watch, play, learn, make and discover."
         android:textColor="@color/blue_grey_100"

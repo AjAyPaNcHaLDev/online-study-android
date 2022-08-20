@@ -70,53 +70,53 @@ public class Watch extends Fragment {
 
 
         initComponent(view);
-        initComponent2(view);
+//        initComponent2(view);
 
         return view;
     }
-
-    private void initComponent2(View view) {
-
-
-        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
-        progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        RecyclerView recyclerViewRated = view.findViewById(R.id.recyclerViewRated);
-        recyclerViewRated.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        // generate data
-        List<Image> items = DataGenerator.getImageDate(this).subList(0, 5);
-        final List<Image> items2 = DataGenerator.getImageDate(this).subList(0, 5);
-
-        recyclerView.setAdapter(new AdapterSnapGeneric(this, items, R.layout.item_snap_full));
-        recyclerView.setOnFlingListener(null);
-
-        progressBar.setMax(items.size());
-        progressBar.setProgress(1);
-        StartSnapHelper startSnapHelper = new StartSnapHelper();
-        startSnapHelper.attachToRecyclerView(recyclerView);
-        startSnapHelper.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
-            @Override
-            public void position(View view, int position) {
-                progressBar.setProgress(position + 1);
-            }
-        });
-
-        recyclerViewRated.setAdapter(new AdapterSnapGeneric(this, items2, R.layout.item_snap_full));
-        recyclerViewRated.setOnFlingListener(null);
-
-        bottomProgressDots(items2.size(), 0);
-        StartSnapHelper startSnapHelper2 = new StartSnapHelper();
-        startSnapHelper2.attachToRecyclerView(recyclerViewRated);
-        startSnapHelper2.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
-            @Override
-            public void position(View view, int position) {
-                bottomProgressDots(items2.size(), position--);
-            }
-        });
-    }
+//
+//    private void initComponent2(View view) {
+//
+//
+//        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
+//        progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+//
+//        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+//        RecyclerView recyclerViewRated = view.findViewById(R.id.recyclerViewRated);
+//        recyclerViewRated.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+//
+//        // generate data
+//        List<Image> items = DataGenerator.getImageDate(this).subList(0, 5);
+//        final List<Image> items2 = DataGenerator.getImageDate(this).subList(0, 5);
+//
+//        recyclerView.setAdapter(new AdapterSnapGeneric(this, items, R.layout.item_snap_full));
+//        recyclerView.setOnFlingListener(null);
+//
+//        progressBar.setMax(items.size());
+//        progressBar.setProgress(1);
+//        StartSnapHelper startSnapHelper = new StartSnapHelper();
+//        startSnapHelper.attachToRecyclerView(recyclerView);
+//        startSnapHelper.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
+//            @Override
+//            public void position(View view, int position) {
+//                progressBar.setProgress(position + 1);
+//            }
+//        });
+//
+//        recyclerViewRated.setAdapter(new AdapterSnapGeneric(this, items2, R.layout.item_snap_full));
+//        recyclerViewRated.setOnFlingListener(null);
+//
+//        bottomProgressDots(items2.size(), 0);
+//        StartSnapHelper startSnapHelper2 = new StartSnapHelper();
+//        startSnapHelper2.attachToRecyclerView(recyclerViewRated);
+//        startSnapHelper2.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
+//            @Override
+//            public void position(View view, int position) {
+//                bottomProgressDots(items2.size(), position--);
+//            }
+//        });
+//    }
 
 
     private void initComponent(View view) {
