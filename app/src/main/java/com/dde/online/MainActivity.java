@@ -4,16 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.widget.NestedScrollView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.dde.online.Fragment.Watch;
+import com.dde.online.Fragment.Home;
 import com.dde.online.utils.Tools;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Watch()).commit();//    this is the home fragment by default
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Home()).commit();//    this is the home fragment by default
         initComponent();
         initToolbar();
     }
