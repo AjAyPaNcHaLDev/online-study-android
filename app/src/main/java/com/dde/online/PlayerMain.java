@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.dde.online.Fragment.Home;
+import com.dde.online.Fragment.Overview;
+import com.dde.online.Fragment.TrialClasses;
 import com.dde.online.utils.Tools;
 import com.dde.online.utils.ViewAnimation;
 import com.google.android.material.tabs.TabItem;
@@ -12,7 +16,7 @@ import com.google.android.material.tabs.TabItem;
 public class PlayerMain extends AppCompatActivity {
     private ImageView bt_toggle;
     private View lyt_more;
-    TabItem overView;
+    TabItem overView,trialClasses;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +36,16 @@ public class PlayerMain extends AppCompatActivity {
         overView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new Overview()).commit();//    this is the home fragment by default
             }
         });
-
+        trialClasses=findViewById(R.id.trialClasses);
+        trialClasses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new TrialClasses()).commit();//    this is the home fragment by default
+            }
+        });
     }
     private void toggleSection(View view) {
         boolean show = Tools.toggleArrow(view);
