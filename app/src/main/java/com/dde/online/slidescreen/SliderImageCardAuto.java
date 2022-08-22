@@ -31,6 +31,7 @@ import com.dde.online.utils.Tools;
 import java.util.ArrayList;
 import java.util.List;
 
+//---------------not in use-------------
 public class SliderImageCardAuto extends AppCompatActivity {
 
     private View parent_view;
