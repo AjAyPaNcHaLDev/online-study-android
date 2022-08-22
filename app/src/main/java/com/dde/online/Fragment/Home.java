@@ -2,6 +2,7 @@ package com.dde.online.Fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
@@ -24,6 +25,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.dde.online.PlayerMain;
+import com.dde.online.adapter.AdapterSnapGeneric;
+import com.dde.online.data.DataGenerator;
+import com.dde.online.helper.StartSnapHelper;
 import com.dde.online.model.Image;
 import com.dde.online.R;
 import com.dde.online.utils.Tools;
@@ -32,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Watch extends Fragment {
+public class Home extends Fragment {
     private View parent_view;
     private ViewPager viewPager;
     private LinearLayout layout_dots;
@@ -46,77 +51,53 @@ public class Watch extends Fragment {
             R.drawable.image_15,
             R.drawable.image_8,
     };
-    private static String[] array_title_place = {
-            "Dui fringilla ornare finibus, orci odio",
-            "Mauris sagittis non elit quis fermentum",
-            "Mauris ultricies augue sit amet est sollicitudin",
-            "Suspendisse ornare est ac auctor pulvinar",
-            "Vivamus laoreet aliquam ipsum eget pretium",
-    };
-
-    private static String[] array_brief_place = {
-            "Foggy Hill",
-            "The Backpacker",
-            "River Forest",
-            "Mist Mountain",
-            "Side Park",
-    };
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_watch, container, false);
+        View view= inflater.inflate(R.layout.fragment_home, container, false);
 
 
         initComponent(view);
-//        initComponent2(view);
+        initComponent2(view);
 
         return view;
     }
 //
-//    private void initComponent2(View view) {
-//
-//
-//        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
-//        progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-//
-//        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        RecyclerView recyclerViewRated = view.findViewById(R.id.recyclerViewRated);
-//        recyclerViewRated.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//
-//        // generate data
-//        List<Image> items = DataGenerator.getImageDate(this).subList(0, 5);
-//        final List<Image> items2 = DataGenerator.getImageDate(this).subList(0, 5);
-//
-//        recyclerView.setAdapter(new AdapterSnapGeneric(this, items, R.layout.item_snap_full));
-//        recyclerView.setOnFlingListener(null);
-//
-//        progressBar.setMax(items.size());
-//        progressBar.setProgress(1);
-//        StartSnapHelper startSnapHelper = new StartSnapHelper();
-//        startSnapHelper.attachToRecyclerView(recyclerView);
-//        startSnapHelper.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
-//            @Override
-//            public void position(View view, int position) {
-//                progressBar.setProgress(position + 1);
-//            }
-//        });
-//
-//        recyclerViewRated.setAdapter(new AdapterSnapGeneric(this, items2, R.layout.item_snap_full));
-//        recyclerViewRated.setOnFlingListener(null);
-//
-//        bottomProgressDots(items2.size(), 0);
-//        StartSnapHelper startSnapHelper2 = new StartSnapHelper();
-//        startSnapHelper2.attachToRecyclerView(recyclerViewRated);
-//        startSnapHelper2.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
-//            @Override
-//            public void position(View view, int position) {
-//                bottomProgressDots(items2.size(), position--);
-//            }
-//        });
-//    }
+    private void initComponent2(View view) {
+
+
+        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
+        progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        RecyclerView recyclerViewRated = view.findViewById(R.id.recyclerViewRated);
+        recyclerViewRated.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        // generate data
+        List<Image> items = DataGenerator.getImageDate(getContext()).subList(0, 5);
+        final List<Image> items2 = DataGenerator.getImageDate(getContext()).subList(0, 5);
+
+        recyclerView.setAdapter(new AdapterSnapGeneric(getContext(), items, R.layout.item_snap_full));
+        recyclerView.setOnFlingListener(null);
+
+        progressBar.setMax(items.size());
+        progressBar.setProgress(1);
+        StartSnapHelper startSnapHelper = new StartSnapHelper();
+        startSnapHelper.attachToRecyclerView(recyclerView);
+        startSnapHelper.setSnapPositionListener(new StartSnapHelper.SnapPositionListener() {
+            @Override
+            public void position(View view, int position) {
+                progressBar.setProgress(position + 1);
+            }
+        });
+
+        recyclerViewRated.setAdapter(new AdapterSnapGeneric(getContext(), items2, R.layout.item_snap_full));
+        recyclerViewRated.setOnFlingListener(null);
+
+
+    }
 
 
     private void initComponent(View view) {
@@ -128,20 +109,26 @@ public class Watch extends Fragment {
         for (int i = 0; i < array_image_place.length; i++) {
             Image obj = new Image();
             obj.image = array_image_place[i];
+
             obj.imageDrw = getResources().getDrawable(obj.image);
-            obj.name = array_title_place[i];
-            obj.brief = array_brief_place[i];
+//            obj.name = array_title_place[i];
+//            obj.brief = array_brief_place[i];
             items.add(obj);
         }
-
         adapterImageSlider.setItems(items);
+        adapterImageSlider.setOnItemClickListener(new AdapterImageSlider.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, Image obj) {
+                startActivity(new Intent(getActivity(),PlayerMain.class));
+            }
+        });
         viewPager.setAdapter(adapterImageSlider);
 
         // displaying selected image first
         viewPager.setCurrentItem(0);
         addBottomDots(layout_dots, adapterImageSlider.getCount(), 0);
-        ((TextView) view.findViewById(R.id.title)).setText(items.get(0).name);
-        ((TextView) view.findViewById(R.id.brief)).setText(items.get(0).brief);
+//        ((TextView) view.findViewById(R.id.title)).setText(items.get(0).name);
+//        ((TextView) view.findViewById(R.id.brief)).setText(items.get(0).brief);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int pos, float positionOffset, int positionOffsetPixels) {
@@ -149,15 +136,18 @@ public class Watch extends Fragment {
 
             @Override
             public void onPageSelected(int pos) {
-                ((TextView) view.findViewById(R.id.title)).setText(items.get(pos).name);
-                ((TextView) view.findViewById(R.id.brief)).setText(items.get(pos).brief);
+//                ((TextView) view.findViewById(R.id.title)).setText(items.get(pos).name);
+//                ((TextView) view.findViewById(R.id.brief)).setText(items.get(pos).brief);
                 addBottomDots(layout_dots, adapterImageSlider.getCount(), pos);
+
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
             }
+
         });
+
 
         startAutoSlider(adapterImageSlider.getCount());
     }
@@ -207,6 +197,11 @@ public class Watch extends Fragment {
             Toast.makeText(getActivity(), item.getTitle(), Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void Player(View view) {
+
+        startActivity(new Intent(getContext(), PlayerMain.class));
     }
 
 

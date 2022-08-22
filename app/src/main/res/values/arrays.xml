@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="sample_images">
+    <item>@drawable/image_8</item>
+    <item>@drawable/image_12</item>
+    <item>@drawable/image_13</item>
+    <item>@drawable/image_14</item>
+    <item>@drawable/image_15</item>
+    </integer-array>
+
+
+    <string-array name="sample_images_name">
+        <![CDATA[ <item>Morning Flower</item>
+             <item>Foggy Hill</item>
+                  <item>The Backpacker</item>
+                     <item>River Forest</item>
+                       <item>Mist Mountain</item>]]></string-array>
+    <string-array name="general_date" >
+        <item>10 Nov 2015</item>
+        <item>23 Jun 2015</item>
+        <item>20 Jul 2015</item>
+        <item>09 Mar 2015</item>
+        <item>01 Jan 2016</item>
+    </string-array>
+    <string-array name="strings_short" >
+
+
+    <item>Sed malesuada volutpat</item>
+    <item>Leo ut semper vulputate</item>
+    <item>Maecenas a lorem in</item>
+    <item>Tincidunt est eros</item>
+        <item>Amet est sollicitudin</item>
+
+    </string-array>
+    <string-array name="strings_medium" >
+        <item>Proin commodo porttitor felis. Integer auctor nulla faucibus tempus. In at viverra tellus.</item>
+        <item>Cras at lobortis velit. In eu turpis euismod dolor feugiat placerat gravida a ante. Duis consequat massa.</item>
+        <item>Praesent eleifend ipsum sapien, vel molestie nibh blandit et. Duis accumsan dignissim velit.</item>
+        <item>Aliquam in risus nibh. Pellentesque lacinia nisi ac est porta, nec eros luctus. Phasellus dictum ornare.</item>
+        <item>In rutrum turpis felis. Ut sodales libero non nibh convallis, ac vehicula tellus laoreet.</item>
+
+    </string-array>
+    <string-array name="full_date" >
+
+
+        <item>Sat, 10 Nov 15, 07:05 PM</item>
+        <item>Tue, 23 Jun 15, 09:24 AM</item>
+        <item>Wed, 20 Jul 15, 08:35 AM</item>
+        <item>Sun, 09 Mar 15, 12:49 PM</item>
+        <item>Mon, 01 Jan 16, 10:50 PM</item>
+
+    </string-array>
+</resources>
