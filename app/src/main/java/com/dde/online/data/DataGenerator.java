@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 
 import com.dde.online.R;
 import com.dde.online.model.Image;
+import com.dde.online.model.Social;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -79,9 +80,21 @@ public class DataGenerator {
     }
 
 
+    public static List<Social> getSocialData(Context ctx) {
+        List<Social> items = new ArrayList<>();
+        TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.sample_images);
+        String name_arr[] = ctx.getResources().getStringArray(R.array.strings_short);
 
-
-
+        for (int i = 0; i < drw_arr.length(); i++) {
+            Social obj = new Social();
+            obj.image = drw_arr.getResourceId(i, -1);
+            obj.name = name_arr[i];
+            obj.imageDrw = ctx.getResources().getDrawable(obj.image);
+            items.add(obj);
+        }
+        Collections.shuffle(items);
+        return items;
+    }
 
 
 

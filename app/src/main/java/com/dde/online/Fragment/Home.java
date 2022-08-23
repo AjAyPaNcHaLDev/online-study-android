@@ -21,11 +21,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
-import com.dde.online.PlayerMain;
+import com.dde.online.CourseDetails;
 import com.dde.online.adapter.AdapterSnapGeneric;
 import com.dde.online.data.DataGenerator;
 import com.dde.online.helper.StartSnapHelper;
@@ -119,7 +118,7 @@ public class Home extends Fragment {
         adapterImageSlider.setOnItemClickListener(new AdapterImageSlider.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Image obj) {
-                startActivity(new Intent(getActivity(),PlayerMain.class));
+                startActivity(new Intent(getActivity(), CourseDetails.class));
             }
         });
         viewPager.setAdapter(adapterImageSlider);
@@ -201,7 +200,7 @@ public class Home extends Fragment {
 
     public void Player(View view) {
 
-        startActivity(new Intent(getContext(), PlayerMain.class));
+        startActivity(new Intent(getContext(), CourseDetails.class));
     }
 
 

@@ -1,199 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".PlayerMain">
+
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".PlayerMain">
+    android:orientation="vertical">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-      <TextView
-          android:id="@+id/bt_toggle"
-          android:layout_width="117dp"
-          android:layout_height="59dp"
-          android:layout_marginHorizontal="@dimen/spacing_medium"
-          android:layout_marginVertical="@dimen/spacing_large"
-          android:background="?attr/selectableItemBackgroundBorderless"
-          android:clickable="true"
-         android:padding="@dimen/spacing_large"
-          android:text="see less"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/image_view"
-          app:tint="@color/grey_80" />
-
-      <ImageView
-          android:id="@+id/image_view"
-          android:layout_width="match_parent"
-          android:layout_height="220dp"
-          android:scaleType="centerCrop"
-          android:src="@drawable/image_8"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-      <com.mikhaellopez.circularimageview.CircularImageView
-          android:id="@+id/image"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
-          android:layout_margin="@dimen/spacing_large"
-          android:src="@drawable/image_12"
-          app:civ_border="false"
-          app:civ_border_color="@color/grey_10"
-          app:civ_border_width="0dp"
-          app:civ_shadow="false"
-          app:civ_shadow_radius="0"
-          app:layout_constraintBottom_toTopOf="@+id/lyt_more"
-          app:layout_constraintStart_toStartOf="@+id/image_view"
-          app:layout_constraintTop_toBottomOf="@+id/image_view" />
-
-      <TextView
-          android:id="@+id/title"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/spacing_large"
-          android:text="Alizabeth Part"
-          android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-          android:textColor="@color/grey_80"
-          app:fontFamily="sans-serif-medium"
-          app:layout_constraintBottom_toTopOf="@+id/rating"
-          app:layout_constraintStart_toEndOf="@+id/image"
-          app:layout_constraintTop_toTopOf="@+id/image" />
-
-      <TextView
-          android:id="@+id/rating"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/spacing_large"
-          android:text="Work contact"
-          android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-          android:textColor="@color/grey_40"
-          app:layout_constraintBottom_toBottomOf="@+id/image"
-          app:layout_constraintStart_toEndOf="@+id/image"
-          app:layout_constraintTop_toBottomOf="@+id/title" />
-
-
-      <LinearLayout
-          android:id="@+id/lyt_more"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="@dimen/spacing_large"
-          android:orientation="vertical"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/image">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-          <TextView
-              android:id="@+id/reviews_text1"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginHorizontal="@dimen/spacing_mlarge"
-              android:layout_marginTop="@dimen/spacing_large"
-              android:text="@string/lorem_ipsum"
-              android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-              android:textColor="@color/grey_40"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/spacing_large"
+                android:src="@drawable/image_12"
+                app:civ_border="false"
+                app:civ_border_color="@color/grey_10"
+                app:civ_border_width="0dp"
+                app:civ_shadow="false"
+                app:civ_shadow_radius="0"
+                app:layout_constraintBottom_toTopOf="@+id/lyt_more"
+                app:layout_constraintStart_toStartOf="@+id/image_view"
+                app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:text="Courses Modules"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/grey_80"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="@+id/image" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!--tab bar start-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:background="@android:color/transparent"
+            app:tabBackground="@android:color/transparent"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/shape_round_corner"
+            app:tabIndicatorColor="@color/red_A200"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="top"
+            app:tabIndicatorHeight="@dimen/spacing_medium"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/red_A200"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:tabTextColor="@color/grey_40">
 
-      </LinearLayout>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/module"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Module" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/dowmload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Download" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/curriculum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Fundamental Test" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Google Meet" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Mock Test" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Analytics" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.tabs.TabLayout>
 
-<!--tab bar start-->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
+        <!--tab bar end-->
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_medium"
-        android:background="@android:color/transparent"
-        app:tabBackground="@android:color/transparent"
-        app:tabGravity="fill"
-        app:tabIndicator="@drawable/shape_round_corner"
-        app:tabIndicatorColor="@color/red_A200"
-        app:tabIndicatorFullWidth="false"
-        app:tabIndicatorGravity="top"
-        app:tabIndicatorHeight="@dimen/spacing_medium"
-        app:tabMode="scrollable"
-        app:tabRippleColor="@android:color/transparent"
-        app:tabSelectedTextColor="@color/red_A200"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
-        app:tabTextColor="@color/grey_40">
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/overView"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Overview" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/trialClasses"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Trial Classes" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/curriculum"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Curriculum" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/instructor"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Instructor" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/reviews"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Reviews" />
+        android:id="@+id/tab_container"
+        >
 
 
-    </com.google.android.material.tabs.TabLayout>
+    </androidx.fragment.app.FragmentContainerView>
 
-<!--tab bar end-->
-
-  </LinearLayout>
-
-<androidx.fragment.app.FragmentContainerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/tab_container"
-    >
-
-
-</androidx.fragment.app.FragmentContainerView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
 
+        </LinearLayout>
 
 
-
-
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
