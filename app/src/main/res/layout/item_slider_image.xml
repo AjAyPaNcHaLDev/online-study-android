@@ -17,6 +17,16 @@
             android:background="@color/grey_80"
             android:scaleType="centerCrop" />
 
+
+
+
     </com.balysv.materialripple.MaterialRippleLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+</LinearLayout>
 </RelativeLayout>

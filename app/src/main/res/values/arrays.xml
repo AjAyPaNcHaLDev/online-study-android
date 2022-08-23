@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="sample_images">
-    <item>@drawable/image_8</item>
-    <item>@drawable/image_12</item>
-    <item>@drawable/image_13</item>
-    <item>@drawable/image_14</item>
-    <item>@drawable/image_15</item>
+    <item>@drawable/dde_exams_nda_maths_course</item>
+    <item>@drawable/shaurya_cds_crash_course</item>
+    <item>@drawable/nda_course</item>
+    <item>@drawable/ima_horse</item>
+    <item>@drawable/iaf_officer</item>
     </integer-array>
 
 

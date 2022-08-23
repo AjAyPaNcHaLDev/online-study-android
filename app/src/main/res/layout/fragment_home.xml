@@ -37,19 +37,27 @@
                 android:layout_marginLeft="@dimen/spacing_middle"
                 android:layout_marginRight="@dimen/spacing_middle"
                 app:cardCornerRadius="3dp"
-                app:cardElevation="2dp">
+                app:cardElevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="220dp"
-                        android:background="@color/grey_20"
-                        android:foreground="@color/overlay_dark_10" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   >
+
+                   <androidx.viewpager.widget.ViewPager
+                       android:id="@+id/pager"
+                       android:layout_width="match_parent"
+                       android:layout_height="220dp"
+                       android:background="@color/grey_20"
+                       android:foreground="@color/overlay_dark_10" />
+
+               </RelativeLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -73,6 +81,50 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="horizontal" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="Mission NDA Mathematics Course"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/highest_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 6999.00"
+        android:textSize="12sp"
+        android:textColor="@color/red_700"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+      />
+    <TextView
+        android:id="@+id/given_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="₹ 3999.00"
+
+        android:textColor="@color/cyan_400"
+        android:textSize="@dimen/tile_letter_font_size"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        />
+
+</LinearLayout>
 
                         </LinearLayout>
 

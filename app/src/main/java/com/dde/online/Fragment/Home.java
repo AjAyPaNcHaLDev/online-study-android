@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -44,12 +45,14 @@ public class Home extends Fragment {
     private Runnable runnable = null;
     private Handler handler = new Handler();
     private static int[] array_image_place = {
-            R.drawable.image_12,
-            R.drawable.image_13,
-            R.drawable.image_14,
-            R.drawable.image_15,
-            R.drawable.image_8,
+            R.drawable.dde_exams_nda_maths_course,
+            R.drawable.shaurya_cds_crash_course,
+            R.drawable.nda_course,
+            R.drawable.ima_horse,
+            R.drawable.iaf_officer,
     };
+    Button watch_now;
+    private static  String _id[]={"1","2","3","4","5"};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -101,6 +104,7 @@ public class Home extends Fragment {
 
     private void initComponent(View view) {
         layout_dots = (LinearLayout) view.findViewById(R.id.layout_dots);
+
         viewPager = (ViewPager) view.findViewById(R.id.pager);
         adapterImageSlider = new AdapterImageSlider(getActivity(), new ArrayList<Image>());
 
@@ -108,7 +112,7 @@ public class Home extends Fragment {
         for (int i = 0; i < array_image_place.length; i++) {
             Image obj = new Image();
             obj.image = array_image_place[i];
-
+obj.id=_id[i];
             obj.imageDrw = getResources().getDrawable(obj.image);
 //            obj.name = array_title_place[i];
 //            obj.brief = array_brief_place[i];
@@ -126,7 +130,7 @@ public class Home extends Fragment {
         // displaying selected image first
         viewPager.setCurrentItem(0);
         addBottomDots(layout_dots, adapterImageSlider.getCount(), 0);
-//        ((TextView) view.findViewById(R.id.title)).setText(items.get(0).name);
+//        ((Button) view.findViewById(R.id.watch_now)).setText(items.get(0).id);
 //        ((TextView) view.findViewById(R.id.brief)).setText(items.get(0).brief);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -261,6 +265,8 @@ public class Home extends Fragment {
                     }
                 }
             });
+
+
 
             ((ViewPager) container).addView(v);
 

@@ -10,6 +10,7 @@ public class Image implements Serializable {
     public Drawable imageDrw;
     public String name;
     public String brief;
+    public String id;
     public Integer counter = null;
 
 }
