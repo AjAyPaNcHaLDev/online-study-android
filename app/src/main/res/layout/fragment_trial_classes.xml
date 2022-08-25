@@ -12,27 +12,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="trial videos:"
+    android:textStyle="italic"
+    android:fontFamily="sans-serif"
+    android:textColor="@android:color/black"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:textSize="@dimen/spacing_mlarge"/>
 
 
         <!-- TODO: Update blank fragment layout -->
-   <com.google.android.exoplayer2.ui.PlayerView
-       android:layout_width="match_parent"
-       android:layout_height="140dp"
-       android:layout_marginBottom="@dimen/spacing_xmlarge"
-       android:id="@+id/video1"/>
     <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video1"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_marginBottom="@dimen/spacing_xmlarge"
-        android:padding="1dp"
-        android:id="@+id/video2"/>
-
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginBottom="@dimen/spacing_xmlarge"
-        android:padding="1dp"
-        android:id="@+id/video3"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="@dimen/spacing_xmlarge" />
 </LinearLayout>
     </FrameLayout>

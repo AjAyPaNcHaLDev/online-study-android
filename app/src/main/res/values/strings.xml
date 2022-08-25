@@ -22,5 +22,10 @@
     <string name="webview_loading">Load Content... </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sir_info" >It is known that mathematics is a course that countless people struggle with on all levels.\n Because it is based on logical reasoning that can seldom be achieved through memorization, a lot of people fail to comprehend the underlying concepts and formulas.\n Past 10 years Aakash has helped students with the basics of mathematics like Algebra, Trigonometry, Calculus, Probability, etc.\n
+    With Experience in teaching across India, understanding and maintaining an open mind to cultural differences and clearing NDA exam has enabled him to prepare a course that fits the requirement of every individual student.
+    His Interests include Reading, Teaching, Playing Chess, etc.\n it is necessary to teach students how to leverage their resourcefulness when it comes to solving problems.
+    \nFollowing the similar approach Courses are made at
+    </string>
 
 </resources>

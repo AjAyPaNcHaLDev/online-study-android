@@ -18,6 +18,7 @@ import com.google.android.exoplayer2.source.MergingMediaSource;
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
+import com.google.android.exoplayer2.util.Util;
 
 import at.huber.youtubeExtractor.VideoMeta;
 import at.huber.youtubeExtractor.YouTubeExtractor;
@@ -25,10 +26,69 @@ import at.huber.youtubeExtractor.YtFile;
 
 
 public class TrialClasses extends Fragment {
-PlayerView video1,    video2,            video3;
+PlayerView video1;
 boolean play_when_ready=true;
+    SimpleExoPlayer player;
 long play_back_position=0;
+int currentWindow=0;
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(Util.SDK_INT>=24){
+            initPlayer();
+        }
+    }
 
+    @Override
+    public void onStop() {
+        if(Util.SDK_INT>-24){
+            releasePlayer();
+        }
+        super.onStop();
+
+    }
+
+    private void releasePlayer() {
+        if(player!=null){
+            play_when_ready= player.getPlayWhenReady();
+            play_back_position= player.getCurrentPosition();
+            currentWindow=player.getCurrentWindowIndex();
+            player.release();
+            player=null;
+
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(Util.SDK_INT>=24|| player==null){
+            initPlayer();
+            hideSystemUI();
+        }
+
+
+    }
+
+    private void hideSystemUI() {
+        video1.setSystemUiVisibility(
+                getView().SYSTEM_UI_FLAG_LOW_PROFILE |
+                        getView().SYSTEM_UI_FLAG_FULLSCREEN |
+                        getView().SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                        getView().SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        getView().SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
+
+    }
+
+    @Override
+    public void onPause() {
+        if(Util.SDK_INT<24){
+            releasePlayer();
+        }
+        super.onPause();
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,23 +96,18 @@ long play_back_position=0;
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_trial_classes, container, false);
 video1=view.findViewById(R.id.video1);
-video2=view.findViewById(R.id.video2);
-video3=view.findViewById(R.id.video3);
-initPlayer("https://www.youtube.com/watch?v=8MLa-Lh8lkU",video1);
-initPlayer("https://www.youtube.com/watch?v=8MLa-Lh8lkU",video2);
-initPlayer("https://www.youtube.com/watch?v=8MLa-Lh8lkU",video3);
+initPlayer();
         return view;
     }
 
-    private void initPlayer(String url, PlayerView video) {
-        SimpleExoPlayer simpleExoPlayer = new SimpleExoPlayer.Builder(getContext()).build();
-video.setPlayer(simpleExoPlayer);
-        initYoutubeVideo(url, simpleExoPlayer);
-
+    private void initPlayer() {
+        player = new SimpleExoPlayer.Builder(getContext()).build();
+        video1.setPlayer(player);
+        initYoutubeVideo("https://www.youtube.com/embed/0zx_eFyHRU0");
     }
 
    @SuppressLint("StaticFieldLeak")
-   public void  initYoutubeVideo(String url,SimpleExoPlayer simpleExoPlayer){
+   public void  initYoutubeVideo(String url){
         new YouTubeExtractor(requireContext()){
 
             @SuppressLint("StaticFieldLeak")
@@ -65,13 +120,13 @@ if (ytFiles!=null){
             .createMediaSource(MediaItem.fromUri(ytFiles.get(audioTag).getUrl()));
     MediaSource  videoSource =new ProgressiveMediaSource.Factory(new DefaultHttpDataSource.Factory())
             .createMediaSource(MediaItem.fromUri(ytFiles.get(videoTag).getUrl()));
-    simpleExoPlayer.setMediaSource(new MergingMediaSource(true,
+    player.setMediaSource(new MergingMediaSource(true,
             videoSource,
             audioSource),
             true);
-    simpleExoPlayer.prepare();
-    simpleExoPlayer.setPlayWhenReady(play_when_ready);
-    simpleExoPlayer.seekTo(0,0);
+    player.prepare();
+    player.setPlayWhenReady(play_when_ready);
+    player.seekTo(0,0);
 }
             }
         }.extract(url,false ,true);

@@ -28,6 +28,9 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/MyApplication/app/src/main/res/layout/item_slider_image.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/MyApplication/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/MyApplication/app/src/main/res/menu/menu_bottom_navigation_basic.xml" value="0.11827956989247312" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable-v24/circular_progress_bar.xml" value="0.187" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable-v24/ic_star_border.xml" value="0.187" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable-v24/progressbar_blue_round.xml" value="0.187" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable-v24/shape_round_corner.xml" value="0.1435" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_expand_arrow.xml" value="0.152" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_more_vert.xml" value="0.1" />
@@ -36,7 +39,9 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_player_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_welcome_screen.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_instructor.xml" value="0.1" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_overview.xml" value="0.165625" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_reviews.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_trial_classes.xml" value="0.165625" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_watch.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/item_snap_full.xml" value="0.21865889212827988" />
