@@ -64,6 +64,10 @@
          app:layout_constraintTop_toTopOf="@+id/image" />
 
       </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -107,6 +111,7 @@
                 android:backgroundTint="@android:color/white"
                 android:clickable="true"
                 android:padding="2dp"
+                android:visibility="gone"
                 android:text="see less"
                 android:textColor="@drawable/common_google_signin_btn_text_dark"
                 android:textSize="@dimen/spacing_large"
@@ -120,7 +125,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="20dp"
+          />
 <!--tab bar start-->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
@@ -202,11 +210,16 @@
     >
 
 </LinearLayout>
+
 </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            />
         <include layout="@layout/course_details_layout" />
     </androidx.cardview.widget.CardView>
 

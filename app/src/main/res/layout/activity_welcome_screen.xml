@@ -22,12 +22,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="14dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="139dp"
-        android:layout_marginEnd="117dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="127dp"
         android:layout_marginBottom="101dp"
-        android:text="Explore \n your \n Creativity"
+        android:text="Explore \nyour \nCreativity"
         android:textColor="@color/quantum_white_100"
         android:textSize="@dimen/spacing_xxxlarge" />
 
@@ -36,19 +36,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="@dimen/spacing_xxxlarge"
-        android:layout_marginBottom="367dp"
+        android:layout_marginBottom="292dp"
         android:text="Join DDE to watch, play, learn, make and discover."
         android:textColor="@color/blue_grey_100"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="201dp"
+        android:layout_marginBottom="128dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -65,6 +65,10 @@
             android:textAllCaps="false"
             android:textColor="@color/blue_grey_900"
             android:textStyle="bold" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"

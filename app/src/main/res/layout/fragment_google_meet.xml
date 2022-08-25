@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.GoogleMeet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="302dp"
+    android:src="@drawable/google_meet"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAllCaps="false"
+    android:textSize="20sp"
+    android:layout_margin="10dp"
+    android:fontFamily="sans-serif"
+    android:text="Get Personalised Session With Instructors To Build Blazing Confidence For Your Exam"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+            android:layout_margin="10dp"
+
+            android:textSize="17sp"
+            android:textColor="@color/cyan_500"
+            android:fontFamily="sans-serif"
+        android:text="@string/alert_complete_course"/>
+    </LinearLayout>
+</FrameLayout>

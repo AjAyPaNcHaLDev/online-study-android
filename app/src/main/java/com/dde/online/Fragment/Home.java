@@ -97,7 +97,6 @@ public class Home extends Fragment {
         recyclerViewRated.setAdapter(new AdapterSnapGeneric(getContext(), items2, R.layout.item_snap_full));
         recyclerViewRated.setOnFlingListener(null);
 
-
     }
 String array_title_place[]={
             "Mission NDA Mathematics Course",
@@ -130,7 +129,7 @@ String array_title_place[]={
         adapterImageSlider.setOnItemClickListener(new AdapterImageSlider.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Image obj) {
-                Toast.makeText(getContext(),obj.id,Toast.LENGTH_SHORT).show();
+
                 startActivity(new Intent(getActivity(), CourseDetails.class));
             }
         });

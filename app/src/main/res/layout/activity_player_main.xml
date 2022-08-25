@@ -13,61 +13,34 @@ tools:context=".PlayerMain">
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/mainPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Introduction"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <ImageView
-                android:id="@+id/image_view"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/image_8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.mikhaellopez.circularimageview.CircularImageView
-                android:id="@+id/image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="@dimen/spacing_large"
-                android:src="@drawable/image_12"
-                app:civ_border="false"
-                app:civ_border_color="@color/grey_10"
-                app:civ_border_width="0dp"
-                app:civ_shadow="false"
-                app:civ_shadow_radius="0"
-                app:layout_constraintBottom_toTopOf="@+id/lyt_more"
-                app:layout_constraintStart_toStartOf="@+id/image_view"
-                app:layout_constraintTop_toBottomOf="@+id/image_view" />
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_large"
-                android:text="Courses Modules"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:textColor="@color/grey_80"
-                app:fontFamily="sans-serif-medium"
-                app:layout_constraintStart_toEndOf="@+id/image"
-                app:layout_constraintTop_toTopOf="@+id/image" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!--tab bar start-->
         <com.google.android.material.tabs.TabLayout
@@ -110,20 +83,25 @@ tools:context=".PlayerMain">
                 android:background="@android:color/transparent"
                 android:text="Fundamental Test" />
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/reviews"
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Comments" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/google_meet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="Google Meet" />
-
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/reviews"
+                android:id="@+id/mock_test"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="Mock Test" />
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/reviews"
+                android:id="@+id/analytics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -138,27 +116,14 @@ tools:context=".PlayerMain">
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/tab_container"
         >
 
 
     </androidx.fragment.app.FragmentContainerView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
 
-
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
 

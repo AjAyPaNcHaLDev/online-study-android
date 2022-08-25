@@ -56,4 +56,26 @@
         <item>Mon, 01 Jan 16, 10:50 PM</item>
 
     </string-array>
+    <string-array name="string_subject" >
+        <item>Math</item>
+        <item>English</item>
+        <item>Current Affairs</item>
+    </string-array>
+    <string-array name="avtar" >
+        <item>@drawable/avtar_study</item>
+    </string-array>
+    <string-array name="lessons" >
+        <item>128 Lessons</item>
+        <item>136 Lessons</item>
+        <item>100 Lessons</item>
+        <item>196 Lessons</item>
+        <item>126 Lessons</item>
+    </string-array>
+    <string-array name="course_name" >
+        <![CDATA[ <item>Mission NDA Mathematics Course</item>
+             <item>Mission NDA Complete Course</item>
+                  <item>Shaurya 60 Days CDS Crash Course</item>
+                     <item>Mission NDA Mathematics Course</item>
+                       <item>Mission NDA Complete Course</item>]]>
+    </string-array>
 </resources>

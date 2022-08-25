@@ -64,13 +64,15 @@ public class DataGenerator {
     public static List<Image> getImageDate(Context ctx) {
         List<Image> items = new ArrayList<>();
         TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.sample_images);
-        String name_arr[] = ctx.getResources().getStringArray(R.array.sample_images_name);
-        String date_arr[] = ctx.getResources().getStringArray(R.array.general_date);
+        String name_arr[] = ctx.getResources().getStringArray(R.array.course_name);
+//        String date_arr[] = ctx.getResources().getStringArray(R.array.general_date);
+        String lessons_arr[] = ctx.getResources().getStringArray(R.array.lessons);
         for (int i = 0; i < drw_arr.length(); i++) {
             Image obj = new Image();
             obj.image = drw_arr.getResourceId(i, -1);
 //            obj.name = name_arr[i];
-            obj.brief = date_arr[randInt(date_arr.length - 1)];
+//            obj.brief = date_arr[randInt(date_arr.length - 1)];
+            obj.brief = lessons_arr[randInt(lessons_arr.length - 1)];
             obj.counter = r.nextBoolean() ? randInt(500) : null;
             obj.imageDrw = ctx.getResources().getDrawable(obj.image);
             items.add(obj);
@@ -82,12 +84,12 @@ public class DataGenerator {
 
     public static List<Social> getSocialData(Context ctx) {
         List<Social> items = new ArrayList<>();
-        TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.sample_images);
-        String name_arr[] = ctx.getResources().getStringArray(R.array.strings_short);
+        TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.avtar);
+        String name_arr[] = ctx.getResources().getStringArray(R.array.string_subject);
 
-        for (int i = 0; i < drw_arr.length(); i++) {
+        for (int i = 0; i < 2; i++) {
             Social obj = new Social();
-            obj.image = drw_arr.getResourceId(i, -1);
+            obj.image = drw_arr.getResourceId(0, -1);
             obj.name = name_arr[i];
             obj.imageDrw = ctx.getResources().getDrawable(obj.image);
             items.add(obj);
