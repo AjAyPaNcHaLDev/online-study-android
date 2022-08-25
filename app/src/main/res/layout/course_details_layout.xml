@@ -10,6 +10,7 @@
         android:id="@+id/continueCourse"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:textStyle="bold"
         android:textColor="#fff"
         android:gravity="center"
         android:fontFamily="sans-serif-condensed"

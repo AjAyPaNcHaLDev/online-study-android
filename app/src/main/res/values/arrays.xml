@@ -8,7 +8,13 @@
     <item>@drawable/iaf_officer</item>
     </integer-array>
 
+<!--<String-array name="course_name">-->
+<!--    <![CDATA[<item>Mission NDA Mathematics Course</item>-->
+<!--    <item>Mission NDA Complete Course</item>-->
+<!--    <item>Shaurya 60 Days CDS Crash Course</item>-->
+<!--    ]]>-->
 
+<!--</String-array>-->
     <string-array name="sample_images_name">
         <![CDATA[ <item>Morning Flower</item>
              <item>Foggy Hill</item>

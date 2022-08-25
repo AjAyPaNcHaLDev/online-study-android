@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
@@ -47,12 +48,10 @@ public class Home extends Fragment {
     private static int[] array_image_place = {
             R.drawable.dde_exams_nda_maths_course,
             R.drawable.shaurya_cds_crash_course,
-            R.drawable.nda_course,
-            R.drawable.ima_horse,
-            R.drawable.iaf_officer,
+            R.drawable.nda_course
     };
     Button watch_now;
-    private static  String _id[]={"1","2","3","4","5"};
+    private static  String _id[]={"1","2","3"};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -100,7 +99,14 @@ public class Home extends Fragment {
 
 
     }
+String array_title_place[]={
+            "Mission NDA Mathematics Course",
+        "Mission NDA Complete Course",
+        "Shaurya 60 Days CDS Crash Course"
+};
 
+    String array_given_price[]={"₹ 3999","₹ 4999","₹ 5000"};
+    String array_highest_price[]={"₹ 5999","₹ 7999","₹ 9000"};
 
     private void initComponent(View view) {
         layout_dots = (LinearLayout) view.findViewById(R.id.layout_dots);
@@ -112,16 +118,19 @@ public class Home extends Fragment {
         for (int i = 0; i < array_image_place.length; i++) {
             Image obj = new Image();
             obj.image = array_image_place[i];
-obj.id=_id[i];
+            obj.id=_id[i];
             obj.imageDrw = getResources().getDrawable(obj.image);
-//            obj.name = array_title_place[i];
+            obj.title = array_title_place[i];
 //            obj.brief = array_brief_place[i];
+            obj.given_price = array_given_price[i];
+            obj.highest_price = array_highest_price[i];
             items.add(obj);
         }
         adapterImageSlider.setItems(items);
         adapterImageSlider.setOnItemClickListener(new AdapterImageSlider.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Image obj) {
+                Toast.makeText(getContext(),obj.id,Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), CourseDetails.class));
             }
         });
@@ -130,8 +139,9 @@ obj.id=_id[i];
         // displaying selected image first
         viewPager.setCurrentItem(0);
         addBottomDots(layout_dots, adapterImageSlider.getCount(), 0);
-//        ((Button) view.findViewById(R.id.watch_now)).setText(items.get(0).id);
-//        ((TextView) view.findViewById(R.id.brief)).setText(items.get(0).brief);
+        ((TextView) view.findViewById(R.id.title)).setText(items.get(0).title);
+        ((TextView) view.findViewById(R.id.given_price)).setText(items.get(0).given_price);
+        ((TextView) view.findViewById(R.id.highest_price)).setText(items.get(0).highest_price);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int pos, float positionOffset, int positionOffsetPixels) {
@@ -139,8 +149,10 @@ obj.id=_id[i];
 
             @Override
             public void onPageSelected(int pos) {
-//                ((TextView) view.findViewById(R.id.title)).setText(items.get(pos).name);
-//                ((TextView) view.findViewById(R.id.brief)).setText(items.get(pos).brief);
+
+                ((TextView) view.findViewById(R.id.title)).setText(items.get(pos).title);
+                ((TextView) view.findViewById(R.id.given_price)).setText(items.get(pos).given_price);
+                ((TextView) view.findViewById(R.id.highest_price)).setText(items.get(pos).highest_price);
                 addBottomDots(layout_dots, adapterImageSlider.getCount(), pos);
 
             }

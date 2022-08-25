@@ -3,18 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textAlignment="center"
-    android:layout_gravity="center"
+    android:padding="3dp"
+    android:layout_margin="5dp"
+    android:background="#F0EFEF"
     tools:context=".Fragment.TrialClasses">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
 
         <!-- TODO: Update blank fragment layout -->
-    <TextView
+   <com.google.android.exoplayer2.ui.PlayerView
+       android:layout_width="match_parent"
+       android:layout_height="140dp"
+       android:layout_marginBottom="@dimen/spacing_xmlarge"
+       android:id="@+id/video1"/>
+    <com.google.android.exoplayer2.ui.PlayerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="@dimen/spacing_xlarge"
-        android:text="Trial classes" />
+        android:layout_height="140dp"
+        android:layout_marginBottom="@dimen/spacing_xmlarge"
+        android:padding="1dp"
+        android:id="@+id/video2"/>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="@dimen/spacing_xmlarge"
+        android:padding="1dp"
+        android:id="@+id/video3"/>
+</LinearLayout>
     </FrameLayout>
