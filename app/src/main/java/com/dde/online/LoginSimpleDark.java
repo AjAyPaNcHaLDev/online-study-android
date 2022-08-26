@@ -36,6 +36,8 @@ public class LoginSimpleDark extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Snackbar.make(parent_view, "Sign Up", Snackbar.LENGTH_SHORT).show();
+                startActivity(new Intent(LoginSimpleDark.this,FormSignupDark.class));
+
             }
         });
         ((View) findViewById(R.id.btn_login)).setOnClickListener(new View.OnClickListener() {
