@@ -78,4 +78,12 @@
                      <item>Mission NDA Mathematics Course</item>
                        <item>Mission NDA Complete Course</item>]]>
     </string-array>
+    <string-array name="officerType">
+        <item id="nof">Navy Officer Female</item>
+        <item id="nom"> Navy Officer Male</item>
+        <item id="aom">Army Officer Male</item>
+         <item id="aof">Army Officer Female </item>
+        <item id="afom">AirForce Officer Male</item>
+        <item id="afof">AirForce Officer Female</item>
+    </string-array>
 </resources>
