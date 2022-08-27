@@ -1,5 +1,6 @@
 package com.dde.online.Fragment;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -34,6 +35,7 @@ import com.dde.online.model.Image;
 import com.dde.online.R;
 import com.dde.online.utils.Tools;
 
+import com.dde.online.MyPermission;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +45,8 @@ public class Home extends Fragment {
     private ViewPager viewPager;
     private LinearLayout layout_dots;
     private AdapterImageSlider adapterImageSlider;
+    private  AdapterSnapGeneric adapterSnapGeneric;
+    private  AdapterSnapGeneric adapterSnapGeneric2;
     private Runnable runnable = null;
     private Handler handler = new Handler();
     private static int[] array_image_place = {
@@ -61,7 +65,8 @@ public class Home extends Fragment {
 
         initComponent(view);
         initComponent2(view);
-
+new MyPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE);
+new MyPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return view;
     }
 //
@@ -79,10 +84,18 @@ public class Home extends Fragment {
         // generate data
         List<Image> items = DataGenerator.getImageDate(getContext()).subList(0, 5);
         final List<Image> items2 = DataGenerator.getImageDate(getContext()).subList(0, 5);
+//
+//        recyclerView.setAdapter(new AdapterSnapGeneric(getContext(), items, R.layout.item_snap_full));
+        adapterSnapGeneric=new AdapterSnapGeneric(getContext(),items,R.layout.item_snap_full);
 
-        recyclerView.setAdapter(new AdapterSnapGeneric(getContext(), items, R.layout.item_snap_full));
-        recyclerView.setOnFlingListener(null);
+        adapterSnapGeneric.setOnItemClickListener(new AdapterSnapGeneric.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, Image obj, int position) {
+                startActivity(new Intent(getActivity(), CourseDetails.class));
 
+            }
+        });
+recyclerView.setAdapter(adapterSnapGeneric);
         progressBar.setMax(items.size());
         progressBar.setProgress(1);
         StartSnapHelper startSnapHelper = new StartSnapHelper();
@@ -94,7 +107,17 @@ public class Home extends Fragment {
             }
         });
 
-        recyclerViewRated.setAdapter(new AdapterSnapGeneric(getContext(), items2, R.layout.item_snap_full));
+         adapterSnapGeneric2 = new AdapterSnapGeneric(getContext(), items2, R.layout.item_snap_full);
+
+        adapterSnapGeneric2.setOnItemClickListener(new AdapterSnapGeneric.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, Image obj, int position) {
+                startActivity(new Intent(getActivity(), CourseDetails.class));
+
+            }
+        });
+
+        recyclerViewRated.setAdapter(adapterSnapGeneric2);
         recyclerViewRated.setOnFlingListener(null);
 
     }

@@ -2,6 +2,7 @@ package com.dde.online.Fragment;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.Manifest;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -26,9 +27,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dde.online.MyPermission;
 import com.dde.online.R;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 
@@ -51,6 +54,8 @@ ImageView userImagePriView;
         chooseFile.setOnClickListener(chooseFileBtn -> {
             chooseFile();
         });
+        new MyPermission(getActivity(), Manifest.permission.CAMERA);
+
 //         parent_view = view.findViewById(android.R.id.content);
         userImagePriView=view.findViewById(R.id.userImagePriView);
         officerTypeSpinner=view.findViewById(R.id.officerTypeSpinner);
@@ -58,20 +63,27 @@ ImageView userImagePriView;
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 // Your code here
                 switch (i){
-                    case 1:
+                    case 0:
                         userImagePriView.setImageResource(R.drawable.navy_officer_women);
+
+                        break;
+                    case 1:
+                        userImagePriView.setImageResource(R.drawable.navy_officer_men);
+
                         break;
                     case 2:
-                        userImagePriView.setImageResource(R.drawable.navy_officer_men);
+                        userImagePriView.setImageResource(R.drawable.indian_army_officer_men);
+
                         break;
                     case 3:
-                        userImagePriView.setImageResource(R.drawable.indian_army_officer_men);
-                        break; case 4:
                         userImagePriView.setImageResource(R.drawable.indian_army_officer_women);
-                        break;case 5:
+
+                        break; case 4:
                         userImagePriView.setImageResource(R.drawable.airforce_officer_men);
-                        break; case 6:
+
+                        break;case 5:
                         userImagePriView.setImageResource(R.drawable.airforce_pilot_women);
+
                         break;
                 }
 
@@ -117,7 +129,6 @@ String text="Hello friend use my referral code and get discount buy course "+ref
 
 
     private void chooseFile() {
-        Log.e("AJAY","hiii error");
       Intent  myFileIntent  =new Intent(Intent.ACTION_GET_CONTENT);
         myFileIntent.setType("image/*");
         startActivityForResult(myFileIntent,10);
@@ -126,18 +137,35 @@ String text="Hello friend use my referral code and get discount buy course "+ref
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Bitmap bitmap=null;
-Intent bitmapIntent = null;
+
         if (resultCode == RESULT_OK) {
 
 
                 if (requestCode == 10)
 
                 {
-                    Bundle extras = data.getExtras();
-                    Bitmap imageBitmap = (Bitmap) extras.get("data");
-                    userImagePriView.setImageBitmap(imageBitmap);
-                    Log.d("selectedPath1 : " ,selectedPath);
+
+   InputStream inputStream = null;
+   Intent OriginalBitmapIntent;
+            OriginalBitmapIntent=data;
+            Bitmap bitmap;
+            try {
+                inputStream = getActivity().getContentResolver().openInputStream(OriginalBitmapIntent.getData());
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+                    bitmap=BitmapFactory.decodeStream(inputStream);
+                    userImagePriView.setImageBitmap(bitmap);
+
+
+
+
+
+
+
+
+
                 }
 
 
