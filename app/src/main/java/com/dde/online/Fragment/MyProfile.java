@@ -2,6 +2,8 @@ package com.dde.online.Fragment;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dde.online.R;
@@ -37,6 +40,8 @@ ImageView userImagePriView;
     String  selectedPath; //
     InputStream inputStream = null;
     Context applicationContext;
+    TextView referLoad;
+    Button shareReferBtn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,9 +83,34 @@ ImageView userImagePriView;
             }
         });
 
+        referLoad=view.findViewById(R.id.referLoad);
+        referLoad.setOnClickListener(view1 -> {
+            if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+                android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                clipboard.setText(referLoad.getText().toString());
+                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
+            } else {
+                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", referLoad.getText().toString());
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
+            }
 
+        });
+
+shareReferBtn=view.findViewById(R.id.shareReferBtn);
+shareReferBtn.setOnClickListener(view12 -> {
+String text="Hello friend use my referral code and get discount buy course "+referLoad.getText().toString()+
+  " \n https://qtcinfotech.in/ddeexams/index.php?referral="+referLoad.getText().toString();
+
+    Intent i = new Intent(android.content.Intent.ACTION_SEND);
+    i.setType("text/plain");
+    i.putExtra(android.content.Intent.EXTRA_TEXT, text);
+    startActivity(i);
+});
          applicationContext = getContext();
         applicationContext.getContentResolver();
+
         return view;
     }
 
