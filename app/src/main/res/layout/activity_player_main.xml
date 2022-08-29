@@ -127,6 +127,6 @@ tools:context=".PlayerMain">
 
 </LinearLayout>
 
-
+<include layout="@layout/activity_bottom_sheet_transform"/>
 
 </androidx.core.widget.NestedScrollView>

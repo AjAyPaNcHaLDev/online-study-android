@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.dde.online.Fragment.Analytics;
 import com.dde.online.Fragment.Comments;
@@ -27,6 +28,7 @@ import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.util.Util;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import at.huber.youtubeExtractor.VideoMeta;
@@ -38,6 +40,10 @@ public class PlayerMain extends AppCompatActivity {
     PlayerView mainPlayer;
     SimpleExoPlayer player;
     TabLayout tabLayout;
+    private ExtendedFloatingActionButton bt_support;
+    private View endView;
+    private FrameLayout root;
+    private boolean slow = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

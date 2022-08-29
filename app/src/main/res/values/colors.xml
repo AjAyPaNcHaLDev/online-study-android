@@ -39,7 +39,8 @@
     <color name="grey_95">#1a1a1a</color>
     <color name="grey_100_">#0d0d0d</color>
 
-
+<color name="dde_btn_clr">#20ad96</color>
+    <color name="dde_heading_text">#00008b</color>
     <!--Material color list from https://material.io/guidelines/style/color.html-->
 
     <color name="red_50">#FFEBEE</color>

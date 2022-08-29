@@ -26,11 +26,6 @@
           android:layout_gravity="center_horizontal"
           android:src="@drawable/dde_logo"
           app:tint="@android:color/holo_red_dark" />
-
-      <View
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="@android:color/darker_gray" />
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -39,7 +34,14 @@
     android:fontFamily="sans-serif-black"
     android:textColor="@color/blue_grey_800"
     android:text="Explore Your Creativity "/>
-      <View
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_large" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+        <View
           android:layout_width="match_parent"
           android:layout_height="@dimen/spacing_large" />
  <View
@@ -48,11 +50,7 @@
  <View
           android:layout_width="match_parent"
           android:layout_height="@dimen/spacing_xlarge" />
-
-
-
-
-      <TextView
+ <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Mobile Number"

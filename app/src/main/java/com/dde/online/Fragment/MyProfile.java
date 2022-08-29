@@ -26,15 +26,11 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.dde.online.MyPermission;
 import com.dde.online.R;
 import com.google.android.material.snackbar.Snackbar;
-
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-
-
 public class MyProfile extends Fragment {
 Spinner officerTypeSpinner;
 ImageView userImagePriView;
@@ -158,15 +154,7 @@ String text="Hello friend use my referral code and get discount buy course "+ref
                     bitmap=BitmapFactory.decodeStream(inputStream);
                     userImagePriView.setImageBitmap(bitmap);
 
-
-
-
-
-
-
-
-
-                }
+ }
 
 
 
