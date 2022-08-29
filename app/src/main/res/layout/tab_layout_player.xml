@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_medium"
+    android:background="@android:color/transparent"
+    app:tabBackground="@android:color/transparent"
+    app:tabGravity="fill"
+    app:tabIndicator="@drawable/shape_round_corner"
+    app:tabIndicatorColor="@color/red_A200"
+    app:tabIndicatorFullWidth="false"
+    app:tabIndicatorGravity="top"
+    app:tabIndicatorHeight="@dimen/spacing_medium"
+    app:tabMode="scrollable"
+    app:tabRippleColor="@android:color/transparent"
+    app:tabSelectedTextColor="@color/red_A200"
+    app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
+    app:tabTextColor="@color/grey_40"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/module"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Module" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/dowmload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Download" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/curriculum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Fundamental Test" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Comments" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/google_meet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Google Meet" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/mock_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Mock Test" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/analytics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Analytics" />
+
+
+</com.google.android.material.tabs.TabLayout>

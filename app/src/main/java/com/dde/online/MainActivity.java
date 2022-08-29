@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new MyProfile()).commit();//    this is the home fragment by default
                         return true;
                     case R.id.navigation_nearby:
+                        startActivity(new Intent(MainActivity.this,BottomSheetTransform.class));
                         Toast.makeText(MainActivity.this,"3",Toast.LENGTH_LONG).show();
 
                         return true;
