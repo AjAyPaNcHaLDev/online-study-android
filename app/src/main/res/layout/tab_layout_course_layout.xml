@@ -20,53 +20,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.tabs.TabItem
-        android:id="@+id/module"
+        android:id="@+id/overView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="Module" />
+        android:text="Overview" />
 
     <com.google.android.material.tabs.TabItem
-        android:id="@+id/dowmload"
+        android:id="@+id/trialClasses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="Download" />
+        android:text="Trial Classes" />
 
     <com.google.android.material.tabs.TabItem
         android:id="@+id/curriculum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="Fundamental Test" />
+        android:text="Curriculum" />
 
     <com.google.android.material.tabs.TabItem
-        android:id="@+id/comments"
+        android:id="@+id/instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="Comments" />
+        android:text="Instructor" />
 
     <com.google.android.material.tabs.TabItem
-        android:id="@+id/google_meet"
+        android:id="@+id/reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="Google Meet" />
-
-<!--    <com.google.android.material.tabs.TabItem-->
-<!--        android:id="@+id/mock_test"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@android:color/transparent"-->
-<!--        android:text="Mock Test" />-->
-
-    <com.google.android.material.tabs.TabItem
-        android:id="@+id/analytics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="Analytics" />
+        android:text="Reviews" />
 
 
 </com.google.android.material.tabs.TabLayout>

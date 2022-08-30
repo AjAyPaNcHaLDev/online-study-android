@@ -14,10 +14,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/overlay_dark_10"
     android:id="@+id/parent_view" >
     <include layout="@layout/image_slider_auto" />
     <include layout="@layout/let_get_started"/>
-    <include layout="@layout/image_slider_popular"/>
-    <include layout="@layout/image_slider_related"/>
+
+        <include layout="@layout/image_slider_my_batches"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include layout="@layout/image_slider_popular"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="3dp"
-    android:layout_margin="5dp"
     android:background="#F0EFEF"
     tools:context=".Fragment.TrialClasses">
 
@@ -15,21 +14,21 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="trial videos:"
-    android:textStyle="italic"
+    android:text="Trial videos"
     android:fontFamily="sans-serif"
-    android:textColor="@android:color/black"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="5dp"
+    android:textColor="@android:color/darker_gray"
+    android:background="@android:color/white"
+    android:padding="10dp"
     android:textSize="@dimen/spacing_mlarge"/>
-
+<View android:layout_height="1dp"
+    android:layout_width="match_parent"
+    android:background="@color/grey_600"/>
 
         <!-- TODO: Update blank fragment layout -->
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/video1"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"

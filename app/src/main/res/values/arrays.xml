@@ -57,9 +57,9 @@
 
     </string-array>
     <string-array name="string_subject" >
-        <item>Math</item>
-        <item>English</item>
-        <item>Current Affairs</item>
+        <item>PAPER - 1: NDA Mathematics</item>
+        <item>PAPER - 2: NDA English</item>
+        <item>PAPER - 3: NDA Current Affairs</item>
     </string-array>
     <string-array name="avtar" >
         <item>@drawable/avtar_study</item>

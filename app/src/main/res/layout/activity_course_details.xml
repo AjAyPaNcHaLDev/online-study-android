@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/overlay_dark_10"
     tools:context=".CourseDetails">
 
 <LinearLayout
@@ -13,184 +14,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<include layout="@layout/course_header_layout"/>
 
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-
-      <ImageView
-          android:id="@+id/image_view"
-          android:layout_width="match_parent"
-          android:layout_height="220dp"
-          android:scaleType="centerCrop"
-          android:src="@drawable/ima_horse"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center_vertical"
-          android:orientation="vertical"
-
-          android:layout_marginTop="10dp">
-
-
-
-     <TextView
-         android:id="@+id/title"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginStart="@dimen/spacing_large"
-         android:text="Mission NDA Mathematics Course"
-         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-         android:textColor="@color/grey_80"
-         app:fontFamily="sans-serif-medium"
-         app:layout_constraintBottom_toTopOf="@+id/rating"
-         app:layout_constraintStart_toEndOf="@+id/image"
-         app:layout_constraintTop_toTopOf="@+id/image" />
-
-      </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            />
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <LinearLayout
-                android:id="@+id/lyt_more"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/reviews_text1"
-                    android:layout_width="match_parent"
-                    android:layout_height="104dp"
-                    android:layout_marginHorizontal="@dimen/spacing_mlarge"
-
-                    android:text="@string/lorem_ipsum"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                    android:textColor="@color/grey_40"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.028"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="0dp" />
-
-
-            </ScrollView>
-            </LinearLayout>
-
-
-            <TextView
-                android:id="@+id/bt_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:layout_marginHorizontal="@dimen/spacing_medium"
-                android:layout_marginVertical="@dimen/spacing_large"
-                android:background="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:clickable="true"
-                android:padding="2dp"
-                android:visibility="gone"
-                android:text="see less"
-                android:textColor="@drawable/common_google_signin_btn_text_dark"
-                android:textSize="@dimen/spacing_large"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/grey_80" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-      <View
-          android:layout_width="match_parent"
-          android:layout_height="20dp"
-          />
-<!--tab bar start-->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_medium"
-        android:background="@android:color/transparent"
-        app:tabBackground="@android:color/transparent"
-        app:tabGravity="fill"
-        app:tabIndicator="@drawable/shape_round_corner"
-        app:tabIndicatorColor="@color/red_A200"
-        app:tabIndicatorFullWidth="false"
-        app:tabIndicatorGravity="top"
-        app:tabIndicatorHeight="@dimen/spacing_medium"
-        app:tabMode="scrollable"
-        app:tabRippleColor="@android:color/transparent"
-        app:tabSelectedTextColor="@color/red_A200"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
-        app:tabTextColor="@color/grey_40">
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/overView"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Overview" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/trialClasses"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Trial Classes" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/curriculum"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Curriculum" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/instructor"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Instructor" />
-
-      <com.google.android.material.tabs.TabItem
-          android:id="@+id/reviews"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="@android:color/transparent"
-          android:text="Reviews" />
-
-
-    </com.google.android.material.tabs.TabLayout>
-
-<!--tab bar end-->
-
-  </LinearLayout>
-
+    <!--tab bar start-->
+    <include layout="@layout/tab_layout_course_layout"
+        />
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/tab_container"
         android:layout_width="match_parent"
@@ -200,28 +28,9 @@
 
     </androidx.fragment.app.FragmentContainerView>
 
-    <androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
-
-</LinearLayout>
-
-</androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+    <include layout="@layout/course_details_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            />
-        <include layout="@layout/course_details_layout" />
-    </androidx.cardview.widget.CardView>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
 

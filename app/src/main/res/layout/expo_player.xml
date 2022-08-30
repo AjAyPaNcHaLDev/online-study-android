@@ -3,19 +3,24 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/mainPlayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_height="280dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
         android:padding="10dp"
-        android:text="Introduction"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="normal" />
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Introduction"
+            android:id="@+id/videoTitle"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
 </LinearLayout>

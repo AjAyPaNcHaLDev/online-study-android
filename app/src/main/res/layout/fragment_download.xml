@@ -22,19 +22,24 @@
                android:textColor="@android:color/black"
                android:textSize="28sp"
                android:text="Introduction"/>
+           <View
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_weight="1" />
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:drawableLeft="@drawable/ic_download_solid"
-    android:text="  Download now"
+    android:text="@string/download_now"
     android:textColor="@android:color/white"
     android:clickable="true"
     android:drawableTint="@android:color/white"
-    android:layout_marginLeft="100dp"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:drawablePadding="5dp"
     android:background="@drawable/btn_rect_green"
-    android:textAllCaps="false"/>
+    android:textAllCaps="false"
+    android:focusable="true" />
        </LinearLayout>
 
    </LinearLayout>

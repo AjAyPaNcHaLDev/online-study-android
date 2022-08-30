@@ -36,5 +36,7 @@
     <string name="alert_complete_course">Complete Course to Unlock Feature</string>
     <string name="offer_string"><![CDATA[Get ₹50 off coupon when your friend registers using your refferal code & enrolls in a course. He too gets INR 50 off on any course or mock test he purchases next.]]></string>
     <string name="lets_get_started">Lets get started preparation with DDE</string>
+    <string name="fundamental_question">Fundamental Question</string>
+    <string name="download_now">Download now</string>
 
 </resources>

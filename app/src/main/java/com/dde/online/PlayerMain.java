@@ -71,10 +71,10 @@ public class PlayerMain extends AppCompatActivity {
                     case 4:
                         getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new GoogleMeet()).commit();//   
                         break;
-                    case 5:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new MockTest()).commit();//   
-                        break;
-                    case 6:
+//                    case 5:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new MockTest()).commit();//
+//                        break;
+                    case 5://6:
                         getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new Analytics()).commit();//   
                         break;
                 }

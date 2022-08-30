@@ -40,7 +40,7 @@ ImageView userImagePriView;
     InputStream inputStream = null;
     Context applicationContext;
     TextView referLoad;
-    Button shareReferBtn;
+    View shareReferBtn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -121,8 +121,6 @@ String text="Hello friend use my referral code and get discount buy course "+ref
 
         return view;
     }
-
-
 
     private void chooseFile() {
       Intent  myFileIntent  =new Intent(Intent.ACTION_GET_CONTENT);
