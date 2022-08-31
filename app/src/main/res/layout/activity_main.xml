@@ -73,5 +73,6 @@
         app:menu="@menu/menu_bottom_navigation_basic" />
 
 </RelativeLayout>
-    <include layout="@layout/navigation_drawer_menu"/>
+    <include layout="@layout/navigation_drawer_menu"
+        android:visibility="visible"/>
 </androidx.drawerlayout.widget.DrawerLayout>

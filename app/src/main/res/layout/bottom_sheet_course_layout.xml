@@ -8,45 +8,55 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:id="@+id/player_control"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dde_btn_clr"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/spacing_small">
-
-
         <LinearLayout
+            android:id="@+id/player_control"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@color/dde_btn_clr"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_small">
 
-
-
-            <Button
-                android:id="@+id/continueCourse"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="@color/dde_btn_clr"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="Continue Course"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="@dimen/spacing_mlarge"
-                android:textStyle="bold" />
+                android:gravity="center_vertical"
+                android:id="@+id/continueCourse"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bt_expand"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="15dp"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_expand_arrow"
+                    app:tint="@android:color/white" />
 
 
+                <TextView
+                    android:id="@+id/continueCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Continue Course"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/spacing_mlarge"
+                    android:textStyle="bold" />
 
 
+            </LinearLayout>
+
+<include layout="@layout/course_details_layout"
+    />
         </LinearLayout>
 
-    </LinearLayout>
+    </FrameLayout>
 
-    <include layout="@layout/course_details_layout"/>
-</FrameLayout>
+

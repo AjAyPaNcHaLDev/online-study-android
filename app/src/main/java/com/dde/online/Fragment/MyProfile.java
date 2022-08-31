@@ -91,31 +91,31 @@ ImageView userImagePriView;
             }
         });
 
-        referLoad=view.findViewById(R.id.referLoad);
-        referLoad.setOnClickListener(view1 -> {
-            if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
-                android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                clipboard.setText(referLoad.getText().toString());
-                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
-            } else {
-                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", referLoad.getText().toString());
-                clipboard.setPrimaryClip(clip);
-                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
-            }
+//        referLoad=view.findViewById(R.id.referLoad);
+//        referLoad.setOnClickListener(view1 -> {
+//            if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+//                android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//                clipboard.setText(referLoad.getText().toString());
+//                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
+//            } else {
+//                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", referLoad.getText().toString());
+//                clipboard.setPrimaryClip(clip);
+//                Toast.makeText(getContext(),"text copy to clipboard",Toast.LENGTH_SHORT).show();
+//            }
+//
+//        });
 
-        });
-
-shareReferBtn=view.findViewById(R.id.shareReferBtn);
-shareReferBtn.setOnClickListener(view12 -> {
-String text="Hello friend use my referral code and get discount buy course "+referLoad.getText().toString()+
-  " \n https://qtcinfotech.in/ddeexams/index.php?referral="+referLoad.getText().toString();
-
-    Intent i = new Intent(android.content.Intent.ACTION_SEND);
-    i.setType("text/plain");
-    i.putExtra(android.content.Intent.EXTRA_TEXT, text);
-    startActivity(i);
-});
+//shareReferBtn=view.findViewById(R.id.shareReferBtn);
+//shareReferBtn.setOnClickListener(view12 -> {
+//String text="Hello friend use my referral code and get discount buy course "+referLoad.getText().toString()+
+//  " \n https://qtcinfotech.in/ddeexams/index.php?referral="+referLoad.getText().toString();
+//
+//    Intent i = new Intent(android.content.Intent.ACTION_SEND);
+//    i.setType("text/plain");
+//    i.putExtra(android.content.Intent.EXTRA_TEXT, text);
+//    startActivity(i);
+//});
          applicationContext = getContext();
         applicationContext.getContentResolver();
 
@@ -133,7 +133,6 @@ String text="Hello friend use my referral code and get discount buy course "+ref
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK) {
-
 
                 if (requestCode == 10)
 
@@ -153,10 +152,7 @@ String text="Hello friend use my referral code and get discount buy course "+ref
                     userImagePriView.setImageBitmap(bitmap);
 
  }
-
-
-
-            }else{
+    }else{
                 Log.d("selectedPath1 : ","Came here its null !");
                 Toast.makeText(getContext(), "failed to get Image!", Toast.LENGTH_SHORT).show();
             }

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.Explore">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/colorAccentLight" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:lineHeight="16sp"
+
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/blue_grey_400" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/amber_900" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/orange_400" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/blue_A700" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/blue_grey_800" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/deep_orange_A100" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/blue_grey_800_overlay" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/orange_400" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/cyan_900" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/orange_400" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+           <View
+               android:layout_width="@dimen/spacing_large"
+               android:layout_height="0dp" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="125dp"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               app:cardBackgroundColor="@color/grey_3"
+               app:cardCornerRadius="3dp"
+               app:cardElevation="0dp"
+               app:cardUseCompatPadding="true">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:padding="@dimen/spacing_large">
+
+                   <RelativeLayout
+                       android:layout_width="75dp"
+                       android:layout_height="75dp">
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_centerInParent="true"
+                           app:srcCompat="@drawable/shape_circle"
+                           app:tint="@color/blue_A400" />
+
+
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginBottom="@dimen/spacing_medium"
+                       android:text="Mission NDA Mathematics Course"
+                       android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                       android:textColor="@color/grey_80"
+                       app:fontFamily="sans-serif-medium" />
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

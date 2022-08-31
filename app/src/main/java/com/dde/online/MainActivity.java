@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dde.online.Fragment.Explore;
 import com.dde.online.Fragment.Home;
 import com.dde.online.Fragment.MyProfile;
 import com.dde.online.utils.Tools;
@@ -82,10 +83,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.myProfile:
                         getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new MyProfile()).commit();//    this is the home fragment by default
                         return true;
-                    case R.id.navigation_nearby:
-                        Toast.makeText(MainActivity.this,"3",Toast.LENGTH_LONG).show();
-
-                        return true;
+                    case R.id.explore:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+                       return true;
+                       case R.id.myBatches:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+                       return true;
                 }
                 return false;
             }

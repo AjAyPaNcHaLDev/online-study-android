@@ -17,7 +17,16 @@
     android:background="@color/overlay_dark_10"
     android:id="@+id/parent_view" >
     <include layout="@layout/image_slider_auto" />
-    <include layout="@layout/let_get_started"/>
+
+        <include
+            layout="@layout/section_recent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp" />
+
+        <include layout="@layout/let_get_started"/>
 
         <include layout="@layout/image_slider_my_batches"
             android:layout_marginBottom="5dp"

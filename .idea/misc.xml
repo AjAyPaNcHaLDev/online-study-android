@@ -41,6 +41,7 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_clock_solid.xml" value="0.148" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_clock_solid1.xml" value="0.122" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_expand_arrow.xml" value="0.152" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_favorite_border.xml" value="0.1" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_file_lines_solid.xml" value="0.148" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_file_solid.xml" value="0.148" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/drawable/ic_launcher_background.xml" value="0.122" />
@@ -66,6 +67,7 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/expo_player.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_curriculum.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_download.xml" value="0.1796875" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_explore.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_home.xml" value="0.28125" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_my_profile.xml" value="0.184" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_overview.xml" value="0.165625" />
@@ -83,6 +85,7 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/let_get_started.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/navigation_drawer_menu.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/recently.xml" value="0.1" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/section_recent_layout.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/tab_layout_course_layout.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/tab_layout_player.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/verification_otp.xml" value="0.1796875" />
