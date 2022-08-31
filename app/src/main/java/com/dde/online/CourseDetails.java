@@ -28,16 +28,16 @@ public class CourseDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_details);
 
-        lyt_more = findViewById(R.id.lyt_more);
+//        lyt_more = findViewById(R.id.lyt_more);
 //        lyt_more.setVisibility(View.GONE);
 
-        bt_toggle = findViewById(R.id.bt_toggle);
-        bt_toggle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggleSection();
-            }
-        });
+//        bt_toggle = findViewById(R.id.bt_toggle);
+//        bt_toggle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                toggleSection();
+//            }
+//        });
         getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new Overview()).commit();//    this is the home fragment by default
 
         tabLayout=findViewById(R.id.tab_layout);

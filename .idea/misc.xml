@@ -52,12 +52,15 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout-v23/fragment_download.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_bottom_sheet_transform.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_course_details.xml" value="0.1796875" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_form_signup_card_stack.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_form_signup_dark.xml" value="0.1796875" />
-        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_login_simple_dark.xml" value="0.1796875" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_login_simple_dark.xml" value="0.22" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_player_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_splash.xml" value="0.1796875" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_verification.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/activity_welcome_screen.xml" value="0.1796875" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/bottom_sheet_course_layout.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/course_details_layout.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/course_header_layout.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/expo_player.xml" value="0.1796875" />
@@ -70,13 +73,13 @@
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/fragment_watch.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_auto.xml" value="0.22" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_my_batches.xml" value="0.1796875" />
-        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_popular.xml" value="0.4107883817427386" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_popular.xml" value="0.36794582392776526" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_populer.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/image_slider_related.xml" value="0.4420401854714065" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/imagesliderauto.xml" value="0.1796875" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/item_expand.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/item_slider_image.xml" value="0.1796875" />
-        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/item_snap_full.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/item_snap_full.xml" value="0.43478260869565216" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/let_get_started.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/navigation_drawer_menu.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/ok/AndroidStudioProjects/qtc_dde_online/app/src/main/res/layout/recently.xml" value="0.1" />

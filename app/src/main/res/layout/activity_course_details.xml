@@ -14,9 +14,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-<include layout="@layout/course_header_layout"/>
-
     <!--tab bar start-->
+    <include layout="@layout/course_header_layout" />
+
     <include layout="@layout/tab_layout_course_layout"
         />
     <androidx.fragment.app.FragmentContainerView
@@ -24,14 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="150dp">
-
-
     </androidx.fragment.app.FragmentContainerView>
 
-    <include layout="@layout/course_details_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
+    <include layout="@layout/bottom_sheet_course_layout"/>
 </LinearLayout>
 
 

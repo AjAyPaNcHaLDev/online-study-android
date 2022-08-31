@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="58dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/player_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dde_btn_clr"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_small">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/continueCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/dde_btn_clr"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Continue Course"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="@dimen/spacing_mlarge"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/course_details_layout"/>
+</FrameLayout>

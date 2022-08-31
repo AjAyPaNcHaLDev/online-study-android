@@ -1,128 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/overlay_light_80"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_8"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark_30" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_mlarge"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:padding="@dimen/spacing_large">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="87dp"
+                android:layout_width="180dp"
+                android:layout_height="92dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/dde_logo"
                 app:tint="@android:color/holo_red_dark" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xxxlarge" />
-
-            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mobile No."
-                android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@color/blue_grey_500"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="20dp" />
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-4dp"
-                android:layout_marginRight="-4dp"
-                android:inputType="numberDecimal"
-                android:maxLength="50"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@color/blue_grey_300"
-                android:theme="@style/EditText.Grey" />
+                android:layout_marginTop="@dimen/spacing_middle"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/spacing_mlarge" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:inputType="number"
+                    android:background="@color/transparent"
+                    android:hint="Mobile "
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Password"
-                android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="@color/blue_grey_500"
-                android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.textfield.TextInputEditText
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-4dp"
-                android:layout_marginRight="-4dp"
-                android:inputType="textPassword"
-                android:maxLength="50"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@color/blue_grey_300"
-                android:theme="@style/EditText.Grey" />
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/spacing_middle" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="@color/transparent"
+                    android:hint="Password"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
 
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/spacing_large" />
-
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginLeft="-4dp"
-                android:layout_marginRight="-4dp"
-                android:background="@drawable/btn_rounded_green_300"
-                android:text="Login"
-                android:backgroundTint="@color/dde_btn_clr"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/spacing_xxxlarge" />
-
+            </androidx.cardview.widget.CardView>
             <TextView
                 android:id="@+id/forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:text="Forgot Password?"
-                android:textAlignment="center"
+                android:textAlignment="viewEnd"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                android:textColor="@color/blue_grey_400"
+                android:textColor="@color/light_green_600"
                 android:textStyle="bold" />
-
             <View
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xxxlarge" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_mlarge"
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:cardBackgroundColor="@color/dde_btn_clr"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/RippleStyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:clickable="true"
+                    android:backgroundTint="@color/dde_btn_clr"
+                    android:text="Sign In"
+                    android:textColor="@android:color/white"
+                    android:onClick="SignUp"/>
+
+
+
+
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -133,25 +136,183 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Don Not have an Account "
+                    android:layout_height="match_parent"
+                    android:text="new user? "
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/blue_grey_300" />
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/sign_up"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:clickable="true"
+                    android:onClick="linkSinIn"
                     android:text="Sign Up"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/green_300"
+                    android:textColor="@color/green_400"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
+
+</RelativeLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/overlay_light_80"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="@dimen/spacing_large">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="87dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:src="@drawable/dde_logo"-->
+<!--                app:tint="@android:color/holo_red_dark" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/spacing_xxxlarge" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Mobile No."-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"-->
+<!--                android:textColor="@color/blue_grey_500"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="-4dp"-->
+<!--                android:layout_marginRight="-4dp"-->
+<!--                android:inputType="numberDecimal"-->
+<!--                android:maxLength="50"-->
+<!--                android:maxLines="1"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="@color/blue_grey_300"-->
+<!--                android:theme="@style/EditText.Grey" />-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/spacing_mlarge" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Password"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"-->
+<!--                android:textColor="@color/blue_grey_500"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="-4dp"-->
+<!--                android:layout_marginRight="-4dp"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:maxLength="50"-->
+<!--                android:maxLines="1"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="@color/blue_grey_300"-->
+<!--                android:theme="@style/EditText.Grey" />-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/spacing_middle" />-->
+
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/spacing_large" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_login"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_marginLeft="-4dp"-->
+<!--                android:layout_marginRight="-4dp"-->
+<!--                android:background="@drawable/btn_rounded_green_300"-->
+<!--                android:text="Login"-->
+<!--                android:backgroundTint="@color/dde_btn_clr"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@android:color/white" />-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/spacing_xxxlarge" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/forgot_password"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:text="Forgot Password?"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                android:textColor="@color/blue_grey_400"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/spacing_xxxlarge" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/spacing_medium"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Don Not have an Account "-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                    android:textColor="@color/blue_grey_300" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/sign_up"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="true"-->
+<!--                    android:text="Sign Up"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                    android:textColor="@color/green_300"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
+
+<!--</LinearLayout>-->

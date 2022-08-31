@@ -51,50 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/lyt_more"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/reviews_text1"
-                        android:layout_width="match_parent"
-                        android:layout_height="104dp"
-                        android:layout_marginHorizontal="@dimen/spacing_mlarge"
-                        android:text="@string/lorem_ipsum"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                        android:textColor="@color/grey_40"
-                        />
-                </ScrollView>
-            </LinearLayout>
-            <TextView
-                android:id="@+id/bt_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:layout_marginHorizontal="@dimen/spacing_medium"
-                android:layout_marginVertical="@dimen/spacing_large"
-                android:background="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:clickable="true"
-                android:padding="2dp"
-                android:visibility="gone"
-                android:text="see less"
-                android:textColor="@drawable/common_google_signin_btn_text_dark"
-                android:textSize="@dimen/spacing_large"
-                android:textStyle="bold"
-                app:tint="@color/grey_80" />
-
-
-        </LinearLayout>
 
     </LinearLayout>
 
