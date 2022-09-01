@@ -54,6 +54,7 @@ public class Home extends Fragment {
             R.drawable.shaurya_cds_crash_course,
             R.drawable.nda_course
     };
+
     Button watch_now;
     private static  String _id[]={"1","2","3"};
 
@@ -67,13 +68,30 @@ public class Home extends Fragment {
         initComponent2(view);
 new MyPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE);
 new MyPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        LinearLayout openExplore=view.findViewById(R.id.openExplore);
+        openExplore.setOnClickListener(views->{
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+
+        });
+        LinearLayout openExplore2=view.findViewById(R.id.openExplore2);
+        openExplore2.setOnClickListener(views->{
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+
+        });
+ LinearLayout openExplore3=view.findViewById(R.id.openExplore3);
+        openExplore3.setOnClickListener(views->{
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+
+        });
+
+
+
         return view;
     }
 //
     private void initComponent2(View view) {
-
-
-        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
+  final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress);
         progressBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);

@@ -3,8 +3,6 @@ package com.dde.online.Fragment;
 import static android.app.Activity.RESULT_OK;
 
 import android.Manifest;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -28,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.dde.online.MyPermission;
 import com.dde.online.R;
-import com.google.android.material.snackbar.Snackbar;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 public class MyProfile extends Fragment {

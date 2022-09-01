@@ -11,10 +11,11 @@
     android:layout_height="match_parent">
 
 
-    <View
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/library_image" />
+        android:scaleType="fitXY"
+        android:src="@drawable/first_sreen_gif" />
 
     <TextView
         android:layout_width="532dp"
@@ -41,7 +42,7 @@
         android:layout_marginBottom="286dp"
         android:lineHeight="30dp"
         android:text="Join DDE to watch, play, learn, make and discover."
-        android:textColor="@color/blue_grey_100"
+        android:textColor="@color/blue_grey_800"
         android:textSize="20sp" />
 
     <LinearLayout

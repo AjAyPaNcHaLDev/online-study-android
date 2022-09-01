@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:background="@android:color/white"
     tools:context=".SplashActivity">
- <ImageView
-            android:id="@+id/imageViewLogo"
-            android:layout_width="127dp"
-            android:layout_height="151dp"
-            android:cropToPadding="false"
-            android:longClickable="false"
-            android:scaleType="fitCenter"
-            android:visibility="visible"
-            app:srcCompat="@drawable/dde_logo_5"
-            tools:srcCompat="@drawable/dde_logo_5" />
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:gravity="center"
+     android:background="@drawable/splash_bg"
+  android:orientation="vertical"
+  >
+  <ImageView
+      android:id="@+id/imageViewLogo"
+      android:layout_width="127dp"
+      android:layout_height="151dp"
+      android:cropToPadding="false"
+      android:longClickable="false"
+      android:scaleType="fitCenter"
+      android:visibility="visible"
+      app:srcCompat="@drawable/dde_logo_5"
+      tools:srcCompat="@drawable/dde_logo_5" />
+ </LinearLayout>
+
 
 </LinearLayout>

@@ -25,8 +25,8 @@ public class CourseDetails extends AppCompatActivity {
 //    private TextView bt_toggle;
 //    private View lyt_more;
 private View parent_view;
-    private View bottom_sheet;
-    private BottomSheetBehavior mBehavior;
+//    private View bottom_sheet;
+//    private BottomSheetBehavior mBehavior;
     TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ private View parent_view;
 //                toggleSection();
 //            }
 //        });
-        mySheet();
+//        mySheet();
         getSupportFragmentManager().beginTransaction().replace(R.id.tab_container,new Overview()).commit();//    this is the home fragment by default
 
         tabLayout=findViewById(R.id.tab_layout);
@@ -122,41 +122,41 @@ private View parent_view;
 //        }
 //    }
 
-   public  void  mySheet(){
-        bottom_sheet = findViewById(R.id.bottom_sheet);
-
-        mBehavior = BottomSheetBehavior.from(bottom_sheet);
-mBehavior.setPeekHeight(300);
-        mBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-                    ViewAnimation.rotate(findViewById(R.id.bt_expand), true);
-                } else {
-                    ViewAnimation.rotate(findViewById(R.id.bt_expand), false);
-                    mBehavior.setPeekHeight(130);
-
-                }
-            }
-
-            @Override
-            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
-            }
-        });
-       (findViewById(R.id.bt_expand)).setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-                   mBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                   ViewAnimation.rotate(v, true);
-               } else {
-                   mBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-                   ViewAnimation.rotate(v, false);
-               }
-           }
-       });
-    }
+//   public  void  mySheet(){
+//        bottom_sheet = findViewById(R.id.bottom_sheet);
+//
+//        mBehavior = BottomSheetBehavior.from(bottom_sheet);
+//mBehavior.setPeekHeight(300);
+//        mBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+//            @Override
+//            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+//                if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+//                    ViewAnimation.rotate(findViewById(R.id.bt_expand), true);
+//                } else {
+//                    ViewAnimation.rotate(findViewById(R.id.bt_expand), false);
+//                    mBehavior.setPeekHeight(130);
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+//
+//            }
+//        });
+//       (findViewById(R.id.bt_expand)).setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View v) {
+//               if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+//                   mBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+//                   ViewAnimation.rotate(v, true);
+//               } else {
+//                   mBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+//                   ViewAnimation.rotate(v, false);
+//               }
+//           }
+//       });
+//    }
 
 
 }

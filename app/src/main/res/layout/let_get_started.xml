@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.cardview.widget.CardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     app:cardCornerRadius="10dp"
     android:background="@android:color/white"
-    app:cardElevation="10dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    app:cardElevation="10dp">
+
+
 
 
     <LinearLayout
@@ -40,4 +45,27 @@
             android:layout_width="wrap_content"
             android:layout_height="10dp"/>
     </LinearLayout>
+
+
+
 </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:elevation="10dp"
+        android:layout_marginLeft="220dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/dde_btn_clr"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/continue_watching"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

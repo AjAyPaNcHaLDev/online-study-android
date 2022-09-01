@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +23,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
     private ActionBar actionBar;
-
+    private DrawerLayout drawer;
     private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initNavigationMenu() {
         NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view);
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -93,14 +92,43 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
-;
-
-    }
+ }
 
     @Override
     public void onBackPressed() {
 
+    }
+
+    public void onNavClick(View view) {
+switch (view.getId()){
+    case R.id.nav_home:
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Home()).commit();//    this is the home fragment by default
+        drawer.close();
+        break;
+    case R.id.nav_Profile:
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new MyProfile()).commit();//    this is the home fragment by default
+        drawer.close();
+        break;
+    case R.id.nav_betches:
+        //  getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+        drawer.close();
+        break;
+    case R.id.nav_History:
+        //  getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+        Toast.makeText(MainActivity.this,"History",Toast.LENGTH_SHORT).show();
+        drawer.close();
+        break;
+    case R.id.nav_inviteEarn:
+        //  getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+        Toast.makeText(MainActivity.this,"Invite And Earn",Toast.LENGTH_SHORT).show();
+        drawer.close();
+        break;
+    case R.id.navLogout:
+        //  getSupportFragmentManager().beginTransaction().replace(R.id.containerFrameLayout,new Explore()).commit();//    this is the home fragment by default
+Toast.makeText(MainActivity.this,"Logout successfully",Toast.LENGTH_SHORT).show();
+        drawer.close();
+        break;
+
+}
     }
 }
