@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dde.online" >
+    package="com.study.online" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -26,28 +26,25 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
-            android:name=".MyProfile"
+            android:name="com.study.online.Verification"
             android:exported="false" />
         <activity
-            android:name=".Verification"
+            android:name="com.study.online.PlayerMain"
             android:exported="false" />
         <activity
-            android:name=".PlayerMain"
+            android:name="com.study.online.CourseDetails"
             android:exported="false" />
         <activity
-            android:name=".CourseDetails"
+            android:name="com.study.online.FormSignupDark"
             android:exported="false" />
         <activity
-            android:name=".FormSignupDark"
+            android:name="com.study.online.LoginSimpleDark"
             android:exported="false" />
         <activity
-            android:name=".LoginSimpleDark"
+            android:name="com.study.online.WelcomeScreen"
             android:exported="false" />
         <activity
-            android:name=".WelcomeScreen"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
+            android:name="com.study.online.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
@@ -57,7 +54,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.study.online.MainActivity"
             android:exported="false" />
     </application>
 
