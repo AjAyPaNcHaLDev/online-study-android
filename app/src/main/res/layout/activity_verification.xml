@@ -47,7 +47,7 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/dde_logo_5" />
+                android:src="@drawable/online_study_logo_remove_bg" />
 
             <TextView
                 android:layout_width="280dp"

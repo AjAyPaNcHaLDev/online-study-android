@@ -27,7 +27,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="@dimen/spacing_xsmall"
-                android:src="@drawable/dde_sir"
+                android:src="@drawable/avatar"
                 app:civ_border="true"
                 app:civ_border_color="@color/blue_800"
                 app:civ_border_width="2dp"
@@ -47,7 +47,7 @@
                     app:fontFamily="sans-serif-medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Aakash Sharma"
+                    android:text="Ajay Panchal"
                     android:fontFamily="sans-serif-condensed-light"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/black" />
@@ -82,7 +82,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Delhi, India"
+                        android:text="Haryana, India"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/blue_grey_900" />
 

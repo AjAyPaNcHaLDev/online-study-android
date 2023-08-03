@@ -22,8 +22,8 @@
       android:longClickable="false"
       android:scaleType="fitCenter"
       android:visibility="visible"
-      app:srcCompat="@drawable/dde_logo_5"
-      tools:srcCompat="@drawable/dde_logo_5" />
+      app:srcCompat="@drawable/online_study_logo_remove_bg"
+      tools:srcCompat="@drawable/online_study_logo_remove_bg" />
  </LinearLayout>
 
 

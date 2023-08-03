@@ -41,7 +41,7 @@
         android:layout_marginTop="@dimen/spacing_xxxlarge"
         android:layout_marginBottom="286dp"
         android:lineHeight="30dp"
-        android:text="Join DDE to watch, play, learn, make and discover."
+        android:text="Join Online Study to watch, play, learn, make and discover."
         android:textColor="@color/blue_grey_800"
         android:textSize="20sp" />
 
@@ -101,6 +101,7 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

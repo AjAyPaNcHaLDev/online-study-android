@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
-        actionBar.setLogo(R.drawable.dde_logo);
+//        actionBar.setLogo(R.drawable.online_study_logo_remove_bg);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
         actionBar.setTitle(" ");
